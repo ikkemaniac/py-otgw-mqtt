@@ -16,7 +16,9 @@ RUN set -e && \
 ARG GIT_COMMIT='NOT SET!'
 LABEL 'py-otgw-mqtt.commit'=$GIT_COMMIT
 
-COPY . $DIR
+COPY *.py $DIR
+COPY config.json $DIR
+COPY README.md $DIR
 
 WORKDIR $DIR
 
