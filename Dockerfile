@@ -1,13 +1,11 @@
-FROM python:3
+FROM python:3.8-alpine
 
 MAINTAINER Cornelis Hoeflake <c.hoeflake@gmail.com>
 
 ENV DIR=/py-otgw-mqtt
 
 RUN set -e && \
-    python -m ensurepip --default-pip && \
-    python -m pip install --upgrade pip && \
-    pip install paho-mqtt && \
+    pip install --no-cache-dir paho-mqtt && \
     mkdir $DIR && \
     cd $DIR
 
