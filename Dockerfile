@@ -6,7 +6,7 @@ LABEL 'docker.image'='3.8-alpine'
 LABEL 'py-otgw-mqtt.url'='https://github.com/choeflake/py-otgw-mqtt/'
 LABEL 'py-otgw-mqtt.branch'='dev'
 
-ENV DIR=/py-otgw-mqtt
+ENV DIR=/py-otgw-mqtt/
 
 RUN set -e && \
     pip install --no-cache-dir paho-mqtt && \
