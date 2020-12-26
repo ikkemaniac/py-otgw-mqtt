@@ -13,6 +13,9 @@ RUN set -e && \
     mkdir $DIR && \
     cd $DIR
 
+ARG GIT_COMMIT='NOT SET!'
+LABEL 'py-otgw-mqtt.commit'=$GIT_COMMIT
+
 COPY . $DIR
 
 WORKDIR $DIR
