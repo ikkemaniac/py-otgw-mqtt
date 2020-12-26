@@ -14,6 +14,10 @@ RUN set -e && \
     cd $DIR
 
 ARG GIT_COMMIT='NOT SET!'
+RUN echo -e "\e[43m\n -- ### -- " \
+	&& echo -e "\e[43mGit Commit: $GIT_COMMIT" \
+	&& echo -e "\e[43m * can be set with '--build-arg GIT_COMMIT=\$(git rev-parse HEAD)'" \
+	&& echo -e "\e[43m -- ### -- \e[0m\n"
 LABEL 'py-otgw-mqtt.commit'=$GIT_COMMIT
 
 COPY *.py $DIR
